@@ -185,3 +185,188 @@ h1 {
     color: #667eea;
     font-weight: 600;
 }
+
+/* TODO: Style .forecast-section */
+/* Suggestions:
+   - margin-top: 30px
+   - padding-top: 30px
+   - border-top: 2px solid #eee (separator from current weather)
+*/
+.forecast-section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #eee;
+}
+
+/* TODO: Style .forecast-title */
+/* Suggestions:
+   - font-size: 1.5rem
+   - color: #333
+   - margin-bottom: 20px
+   - text-align: center or left
+*/
+.forecast-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* TODO: Style .forecast-container */
+/* Suggestions:
+   - display: grid
+   - grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
+   - Or: grid-template-columns: repeat(5, 1fr) for exactly 5 columns
+   - gap: 15px
+   - Make it responsive!
+*/
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* TODO: Style .forecast-card */
+/* Suggestions:
+   - background: linear-gradient or solid color
+   - padding: 20px
+   - border-radius: 15px
+   - text-align: center
+   - box-shadow for depth
+   - transition for hover effect
+*/
+.forecast-card {
+    background: linear-gradient(135deg, rgba(102,126,234,0.08), rgba(134,99,210,0.08));
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(102,126,234,0.25);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(102,126,234,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* TODO: Add hover effect for forecast cards */
+/* Suggestions:
+   - transform: translateY(-5px)
+   - box-shadow: larger shadow
+   - Use transition for smooth effect
+*/
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(102,126,234,0.25);
+}
+
+/* TODO: Style day name in forecast cards */
+/* Example: .forecast-card h4 or .forecast-day */
+/* Suggestions:
+   - font-size: 1.1rem
+   - color: #333
+   - margin-bottom: 10px
+   - font-weight: 600
+*/
+.forecast-day-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* TODO: Style forecast icons */
+/* Suggestions:
+   - width: 60px
+   - height: 60px
+   - Or adjust to your preference
+*/
+.forecast-weather-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* TODO: Style forecast temperature */
+/* Suggestions:
+   - font-size: 1.8rem
+   - color: #667eea (match your theme)
+   - font-weight: bold
+   - margin: 10px 0
+*/
+.forecast-temperature {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #667eea;
+    margin: 10px 0;
+}
+
+/* TODO: Style forecast description */
+/* Suggestions:
+   - font-size: 0.9rem
+   - color: #666
+   - text-transform: capitalize
+*/
+.forecast-description {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: capitalize;
+    margin: 8px 0;
+    line-height: 1.3;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .forecast-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 12px;
+    }
+    
+    .forecast-card {
+        padding: 15px;
+    }
+    
+    .forecast-weather-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .forecast-temperature {
+        font-size: 1.5rem;
+    }
+    
+    .forecast-day-name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast-container {
+        grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+        gap: 10px;
+    }
+    
+    .forecast-card {
+        padding: 12px;
+    }
+    
+    .forecast-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .forecast-weather-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .forecast-temperature {
+        font-size: 1.3rem;
+    }
+    
+    .forecast-day-name {
+        font-size: 0.95rem;
+    }
+    
+    .forecast-description {
+        font-size: 0.8rem;
+    }
+}
